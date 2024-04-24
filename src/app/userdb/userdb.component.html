@@ -1,0 +1,69 @@
+<app-header></app-header>
+
+<div class="container-fluid mt-4 mb-5">
+    <span style="cursor: pointer;" class="mt-4 mb-5 ms-3" routerLink="/"><i class="fa-solid fa-left-long fa-2xl" style="color:#C4A05B; "></i></span>
+    <div class="mt-2"  style="height: 380px;background-color: #C4A05B;">
+        <div class="row">
+            <div class="col-lg-6 text-center mt-5 ">
+                <h2 class="text-center ft1 text-light">FIND YOUR BOOK Of <span class="text-dark ft2">Choice</span> </h2>
+                <p class="hd3 ms-5">Bookish has the world’s best guides to 100+ books.Learn key points and gain insights you won't find anywhere else.</p>
+
+                <input type="text" class="form-control form-control-lg mt-3" id="floatingUserInput" placeholder="Search for your books.." [(ngModel)]="searchtext" >
+                
+
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                <img src="https://assets-cdn.reedsy.com/discovery/vite/assets/reading-OL3kielM.svg " class="img-fluid d-none d-sm-block">
+
+                </div>
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div >
+    <!-- <h2 class="ho2">Start exploring..</h2>
+    <h4 class="hd2">Here's what our reviewers think you should read this week.</h4> -->
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let i of books |filter:searchtext" >
+                <div class="card h-100 border shadow p-3" routerLink="/view/{{i.id}}">
+                    <!-- Product image-->
+                    <img class="card-img-top"  src="{{SERVER_URL}}/upload/{{i.b_image}}" style="cursor: pointer;" alt="..." height="280px"/>
+                    <!-- Product details-->
+                    <div class="card-body ">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <span class="fw-bolder ho2">{{i.title}}</span>
+
+                            <!-- Product price-->
+                            <!-- {{i.price | currency:'INR'}} -->
+                        </div>
+                    </div>
+                    <!-- <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-outline-dark" ><i class="fa-solid fa-lg fa-heart-circle-plus" style="color: #ec1387;"></i></button>
+                        <button class="btn btn-outline-dark" ><i class="fa-solid fa-cart-plus fa-lg"></i></button>
+                    </div> -->
+                  
+                </div>
+            </div>
+
+
+            
+
+
+            
+    
+        </div>
+
+</div>
+
+
+ </div>
+
+
+<app-footer></app-footer>

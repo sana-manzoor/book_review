@@ -1,0 +1,54 @@
+
+<div class="w-100  sh  " style="height: 90vh;">
+    <div class="row w-100 mb-2 " style="height: 730px;" >
+        <div class="col-lg-6 pt-4 " style="border-radius:0 130px 385px 0;background-color:  #C4A05B;">
+            <h1 class="text-center mt-5 cl text-light">One of us?</h1>
+            <p class="text-center mt-4 ms-5 me-5 prg text-light">Welcome back to our book recommendation community!!We are so glad that you are here to continue discovering new <span class=" cl ">BOOKS!</span></p>
+            <div class="d-flex justify-content-center">
+                <button class="button-81 mt-5" routerLink="/log" >SIGN IN</button>
+
+            </div>
+            <br> <br>
+            <div class="d-flex justify-content-center">
+                <img src="../assets/wr.png" class="img-fluid "  style="height: 390px;" alt="">
+
+            </div>
+        </div>
+        <div class="col-lg-6 p-3 pt-4 text-center">
+            <h1 class="mt-5 mb-5 text-center cl">Sign Up</h1>
+            <form action=""  [formGroup]="regForm">
+              <div class="form-floating ms-5 me-5 mb-4 mt-3 w-70">
+                <input type="text" formControlName="username" class="form-control" id="floatingUserInput" placeholder="Username">
+                    <label for="floatingUserInput">Username</label>
+                    <div class="text-danger" *ngIf="regForm.get('username')?.invalid && regForm.get('username')?.touched" >
+                      *Enter Valid Username
+                    </div>
+                  </div>
+                  <div class="form-floating ms-5 me-5 mb-4 mt-3 w-70">
+                    <input type="email" formControlName="email" class="form-control" id="floatingEmailInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                    <div class="text-danger" *ngIf="regForm.get('email')?.invalid && regForm.get('email')?.touched" >
+                      *Enter Valid Email
+                    </div>
+                  </div>
+                  <div class="form-floating ms-5 me-5 mb-4 mt-3 w-70">
+                    <input type="password" formControlName="password"  class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                    <div class="text-danger" *ngIf="regForm.get('password')?.invalid && regForm.get('password')?.touched" >
+                      *Enter Valid Password
+                    </div>
+                  </div>
+                  
+                  <div class="mt-3 d-flex justify-content-center">
+                    <button class="button-59 btn-lg mt-3" style="font-size: 23px;" (click)="getFormData()" [disabled]="regForm.invalid" >Sign Up</button>
+                    <a  class="text-decoration-none pt-3 mt-3 ms-2" routerLink="/log" style="font-size: 18px;color: #C4A05B;">Already a User?</a>
+                  </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+

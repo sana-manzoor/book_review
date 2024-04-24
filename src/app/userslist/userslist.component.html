@@ -1,0 +1,83 @@
+<!-- <app-header></app-header> -->
+<div class="d-flex" style="height: 100vh;">
+    <!-- ---------------------------------------------------- -->
+    <div style="height: 100vh;width: 300px;background-color: #C4A05B;">
+
+        <a class="navbar-brand" href="#">
+            <img src="../assets/bricon3.png" style="height: 75px;" class="ms-4 mb-4" alt="">
+        </a>
+
+        <div class="d-flex justify-content-center">
+            <button class="button-81 mt-3 mb-2 text-center ms-0 me-0" routerLink="/admdb">
+                <h2 class="ho2 text-center">Dashboard</h2>
+            </button>
+
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="button-81 mt-3 mb-2 text-center" routerLink="/addb">
+                <h2 class="ho2 text-center" >Add Books</h2>
+            </button>
+
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="button-81 mt-3 mb-2 text-center"  routerLink="/viewb">
+                <h2 class="ho2 text-center" >View Books</h2>
+            </button>
+
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="button-81 mt-3 mb-2 text-center" routerLink="/usersl">
+                <h2 class="ho2 text-center " >Users List</h2>
+            </button>
+
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+            <button class="button-59 btn-lg mt-3" style="font-size: 23px;">Log Out</button>
+
+        </div>
+
+
+    </div>
+
+    <!-- ------------------------------------------------------------- -->
+
+
+
+    <!-- ------------------------------------------------------------ -->
+
+    <div class="w-100 p-5 scr" style="height: 80vh;" >
+        <h1 class="cl2 text-center">List of Users</h1>
+        <table class="table table-hover mt-5">
+            <thead>
+              <tr >
+                <th scope="col"></th>
+                <th scope="col">userId</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <!-- <th scope="col"></th> -->
+
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let i of users;index as ind"  >
+                <!-- data-bs-toggle="modal" data-bs-target="#exampleModal" -->
+                <th scope="row">{{ind+1}}</th>
+                <td>{{i._id}}</td>
+                <td>{{i.username}}</td>
+                <td>{{i.email}}</td>
+
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+
+
+
+  
+  </div>
+
+
+    <!-- <app-footer></app-footer> -->

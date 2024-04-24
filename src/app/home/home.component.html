@@ -1,0 +1,222 @@
+<!-- <app-header></app-header> -->
+
+<div class="container-fluid m-0" >
+    <!-- <div class="container-fluid w-100 img-fluid " style="height: 650px; background-image: url('../assets/wp.png');"> -->
+      <!-- <h1 class="mt-5 ms-5 pt-5 hd1">Dive into the depths <br> of a captivating <span style="color: #C4A05B;">NARRATIVE..</span> </h1>
+      
+
+    </div> -->
+    <!-- ----------------------------- -->
+
+    <div class="row w-100  " style="background-color: #C4A05B;height: 739px;" >
+
+    <div class="col-lg-6 pt-5 ">
+            <h1 class="mt-5 ms-5 pt-5 hd1">Dive into the depths <br> of a captivating <span class="ho2" style="color: white">NARRATIVE..</span> </h1> 
+            <h4 class="hd2 mt-4 ms-5 pt-2 me-5">Embark with us on thrilling journeys and breathtaking adventures with these captivating reads. </h4>
+            <!-- Thousands of titles. Let us guide you through the world's wisdom. -->
+            <div class="ms-2 mt-5">
+            <button class="button-59 btn-lg mt-3 ms-5 me-4" style="font-size: 23px;" routerLink="/userdb"  >Browse Books</button>
+            <button class="button-59 btn-lg mt-3" style="font-size: 23px;" routerLink="/log"   >Sign In</button>
+
+
+           </div>
+  
+    </div>
+  
+          <div class="col-lg-6 ">
+            
+            <img src="https://www.mentorist.app/static/img/hp/m-books.png" class="img-fluid d-none d-sm-block " alt="">
+            <img src="https://www.mentorist.app/static/img/hp/m-books.png" class="img-fluid d-block d-sm-none " style="height: 260px;width: 500px;" alt="">
+
+             
+          </div>
+ </div>
+
+ <br>
+
+ <!-- ----------------------------- -->
+
+
+ <div class="pt-4 ">
+    <h2 class="ho2">Start exploring..</h2>
+    <h4 class="hd2">Here's what our reviewers think you should read this week.</h4>
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col " *ngFor="let i of books;let in=index" >
+                <div class="card h-100 border shadow p-3" *ngIf="in < 4" routerLink="/view/{{i.id}}">
+                    <!-- Product image-->
+                    <img class="card-img-top"  src="{{SERVER_URL}}/upload/{{i.b_image}}" style="cursor: pointer;" alt="..." height="280px"/>
+                    <!-- Product details-->
+                    <div class="card-body " >
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <span class="fw-bolde  ho3">{{i.title}}</span>
+                            <!-- <h5 class="fw-bolder">{{i.author}}</h5> -->
+
+                            <!-- Product price-->
+                            <!-- {{i.price | currency:'INR'}} -->
+                        </div>
+                    </div>
+                    <!-- <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-outline-dark" ><i class="fa-solid fa-lg fa-heart-circle-plus" style="color: #ec1387;"></i></button>
+                        <button class="btn btn-outline-dark" ><i class="fa-solid fa-cart-plus fa-lg"></i></button>
+                    </div> -->
+                  
+                </div>
+
+                
+            </div>
+    
+        </div>
+
+
+</div>
+
+<div class="d-flex justify-content-center">
+    <button class="button-81 mt-5 btn btn-xl" routerLink="/userdb" >Explore More</button>
+
+</div>
+
+
+ </div>
+
+ <br>
+
+<!-- ----------------------------- -->
+
+
+ <div class="mt-5 mb-5" >
+    <h1 class="ho2 mt-5 mb-5">Why is <img src="../assets/bricon.png" style="height: 80px;width: 210px;" alt=""> reviews the <span style="color: #C4A05B;"> BEST??</span></h1>
+    <div class="row mt-3">
+        <div class="col-lg-4 ab">
+            <div class="d-flex justify-content-center">
+                <img src="https://www.shortform.com/img/best-3.4019eadf.svg" alt="">
+            </div>
+            <h2 class="text-center mt-5 mb-4 ho2">Crystal-Clear Logic</h2>
+            <p class="text-center mt-3 mb-4 hd3 ps-2 pe-2">We take confusing ideas and explain them in plain and simple ways. Never get confused by a complicated book again.</p>
+      </div>
+
+
+        <div class="col-lg-4 ab">
+            <div class="d-flex justify-content-center">
+                <img src="https://www.shortform.com/img/best-2.fe140a10.svg" alt="">
+            </div>
+            <h2 class="text-center mt-5 mb-4 ho2">Brilliant New Insights</h2>
+            <p class="text-center mt-3 mb-4 hd3 ps-2 pe-2"> We add smart analysis, connecting ideas in novel ways and discussing key updates since the book was published.</p>
+
+        </div>
+
+
+        <div class="col-lg-4 ab ">
+            <div class="d-flex justify-content-center">
+                <img src="https://www.shortform.com/img/best-1.900e4b58.svg" alt="">
+            </div>
+            <h2 class="text-center mt-5 mb-4 ho2">Always Concise</h2>
+            <p class="text-center mt-3 mb-4 pe-2 ps-2 hd3">  Your time is valuable, and we don't waste it. We write with zero fluff, making every word and sentence deserve your time.</p>
+
+        </div>
+
+    </div>
+ </div>
+
+ <br>
+<!-- ----------------------------- -->
+ <div  class="mt-5" style="height: 460px;">
+    <div class="row">
+        <div class="col-lg-6 d-flex justify-content-center ab">
+            <img src="https://www.mentorist.app/static/img/hp01_2020/screenshots/8.png" class="img-fluid" style="height: 400px;" alt="">
+
+        </div>
+        <div class="col-lg-6 text-center">
+            <h2 class="hd1 pt-5 pb-3">Discover weekly, the best new books</h2>
+            <p class="hd3 pt-4  p-5 d-none d-sm-block">The best books go undiscovered, be part of the movement that shines a light on them.Connect with the world's biggest book nerds and folk that know the publishing industry better than writers know the taste of hot coffee! Start getting your book recommendations from real people that you can trust, not some algorithm.</p>
+
+
+        </div>
+    </div>
+
+ </div>
+
+ <br>
+ <!-- ------------------------------ -->
+<div class="pb-5 mb-5 container-fluid" style="height: 560px;">
+    <h1 class="ho2 mt-5 mb-5 d-none d-sm-block">Why people love using <img src="../assets/bricon.png" style="height: 80px;width: 210px;" alt=""> ?</h1>
+    <h2 class="ho2 mt-5 mb-5 d-block d-sm-none">Why people love using <img src="../assets/bricon.png" style="height: 80px;width: 120px;" alt=""> ?</h2>
+
+    <div class=" container d-flex justify-content-center "  >
+
+            <div class="d-block d-sm-none">
+                <img src="../assets/ca4.png" class="img-fluid" alt="">
+            </div>
+
+
+
+        <div class="accordion d-none d-sm-block" id="accordionExample"  >
+            <div class="accordion-item d-block" style="width: 1000px;" >
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" style="border-radius: 125px 125px 125px 125px;background-color: #C4A05B;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <img src="https://www.shortform.com/img/testimonial-stacey-morris.40d70db5.jpg" class="im1 p-0" alt="">
+                  <p class="hd4 text-dark pt-3">Stacey Wintson</p>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p class="hd3">"I’ve never seen such a great analysis of this book. The exercises are perfect – not overwhelming or meager, but just right. Thanks for making me smarter every day."    &nbsp;&nbsp;&nbsp;                   -Stacey Wintson</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" style="width: 1000px;" >
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" style="border-radius: 125px 125px 125px 125px;background-color: #C4A05B;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <img src="https://www.shortform.com/img/testimonial-brad-bergan.138e0b77.jpg" class="im1 p-0" alt="">
+                    <p class="hd4 text-dark pt-3">Brad Alley</p>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p class="hd3">Bookish’s most valuable benefits are understanding a book's key ideas better, the satisfaction of grasping difficult books with speed and ease, and understanding subjects that really interest me.  &nbsp;&nbsp;&nbsp;                   -Stacey Wintson</p>
+                
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" style="width: 1000px;" >
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" style="border-radius: 125px 125px 125px 125px;background-color: #C4A05B;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <img src="https://www.shortform.com/img/testimonial-jerry-mcphee.069d48ec.jpg" class="im1 p-0" alt="">
+                    <p class="hd4 text-dark pt-3">Mark Stephen</p>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p class="hd3">I LOVE Bookish as these are the BEST book companions I’ve ever seen...and I’ve looked at lots of similar sites. The 1-pager and then the longer review is so useful. &nbsp;&nbsp;&nbsp;                   -Stacey Wintson</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" style="width: 1000px;" >
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" style="border-radius: 125px 125px 125px 125px;background-color: #C4A05B;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <img src="https://th.bing.com/th/id/OIP.Z306v3XdxhOaxBFGfHku7wHaHw?w=188&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="im1 p-0" alt="">
+                    <p class="hd4 text-dark pt-3">Ziara Allora</p>
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p class="hd3">You guys really hit it out of the park again with The 48 Laws of Power! I’ve never seen such a great analysis of this book. The exercises are perfect – not overwhelming or meager, but just right. Thanks for making me smarter every day.</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+          </div>
+         
+        
+    </div>
+
+
+</div>
+
+</div>
+
+<app-footer></app-footer>

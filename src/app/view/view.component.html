@@ -1,0 +1,103 @@
+<app-header></app-header>
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 img-fluid border shadow" style="height: 620px; width: 520px;" src="{{SERVER_URL}}/upload/{{book.b_image}}" alt="..." /></div>
+            <div class="col-md-6">
+           
+                <h1 class="display-5 fw-bolder hd1">{{book.title}}</h1>
+                <div class=" mb-4">
+                    <h3 class="ho2 mb-3 mt-3">{{book.author}}</h3>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #FFD43B;"></i><i class="fa-solid fa-star ps-2 fa-2xl" style="color: #FFD43B;"></i><i class="fa-solid fa-star ps-2 fa-2xl" style="color: #FFD43B;"></i><i class="fa-solid fa-star ps-2 fa-2xl" style="color: #FFD43B;"></i><i class="fa-solid fa-star ps-2 fa-2xl" style="color: #FFD43B;"></i>
+                </div>
+                <p class="hd2">{{book.description}}</p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn"  ><i class="fa-solid fa-2xl fa-heart-circle-plus" (click)="addWish(book)" style="color: #ec1387;"></i></button>
+                        <!-- <button class="btn btn-outline-dark" (click)="addCart(product)" ><i class="fa-solid fa-cart-plus fa-lg"></i></button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid ">
+    <h2 class="hd1 mt-3">Comments</h2>
+    <div class="row  mt-3">
+
+        <!-- -------------------------------------- -->
+        <div class=" scr col-lg-6 w-50  "  >
+            <div class="border shadow" *ngFor="let i of book.comment">
+                <div class="border shadow mb-3">
+                    <div class=" d-flex">
+                    <img src="https://th.bing.com/th/id/OIP.Z306v3XdxhOaxBFGfHku7wHaHw?w=188&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="im1 p-0" alt="">
+                    <span class="hd4 text-dark pt-3 ms-3"> {{i.usern}}</span>
+                </div>
+                <div>
+                    <p class="hd2">{{i.review}}</p>
+    
+                </div>
+
+            </div>
+
+            </div>
+
+            <!-- <div class="border shadow">
+                <div class="border shadow mb-3">
+                    <div class=" d-flex">
+                    <img src="https://www.shortform.com/img/testimonial-stacey-morris.40d70db5.jpg" class="im1 p-0" alt="">
+                    <p class="hd4 text-dark pt-3">Stacey Wintson</p>
+                </div>
+                <div>
+                    <p class="hd2">Best book in a very long time!!Must read.</p>
+    
+                </div>
+
+            </div>
+
+            </div> -->
+
+            <!-- <div class="border shadow">
+                <div class="border shadow mb-3">
+                    <div class=" d-flex">
+                    <img src="https://www.shortform.com/img/testimonial-stacey-morris.40d70db5.jpg" class="im1 p-0" alt="">
+                    <p class="hd4 text-dark pt-3">Stacey Wintson</p>
+                </div>
+                <div>
+                    <p class="hd2">Best book in a very long time!!Must read.</p>
+    
+                </div>
+
+            </div>
+
+            </div> -->
+            
+
+            
+        </div>
+
+<!-- ----------------------------------------- -->
+        
+
+
+        
+        <div class=" col-lg-6  w-50 mt-3" >
+            <div class="border shadow mt-5">
+                <form (ngSubmit)="handlecomment()" #myForm="ngForm">
+                <h3 class="text-center ho2 mt-4">Leave a <span class="ft2">Comment</span></h3>
+                <input type="text" [(ngModel)]="rev.review" class="form-control form-control-lg mt-3" name="review" id="floatingUserInput" placeholder="Leave your comment here..." >
+                <div class="d-flex justify-content-center mt-3 mb-5">
+                    <button class="button-59 btn-lg mt-3" style="font-size: 23px;" (click)="resetform(myForm)" > Post Comment</button>
+
+                </div>
+
+            </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<app-footer></app-footer>

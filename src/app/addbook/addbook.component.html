@@ -1,0 +1,117 @@
+<!-- <app-header></app-header> -->
+<div class="d-flex" style="height: 100vh;">
+    <!-- ---------------------------------------------------- -->
+    <div  style="height: 100vh;width: 300px;background-color: #C4A05B;">
+
+        <a class="navbar-brand" href="#">
+            <img src="../assets/bricon3.png" style="height: 75px;" class="ms-4 mb-4"  alt="">
+          </a>
+          
+          <div class="d-flex justify-content-center">
+            <button class="button-81 mt-3 mb-2 text-center ms-0 me-0" routerLink="/admdb"><h2 class="ho2 text-center">Dashboard</h2></button> 
+
+          </div>
+          <div class="d-flex justify-content-center">
+            <button class="button-81 mt-3 mb-2 text-center" routerLink="/addb"><h2 class="ho2 text-center">Add Books</h2></button> 
+
+          </div>
+          <div class="d-flex justify-content-center">
+            <button class="button-81 mt-3 mb-2 text-center" routerLink="/viewb"><h2 class="ho2 text-center">View Books</h2></button> 
+
+          </div>
+          <div class="d-flex justify-content-center">
+            <button class="button-81 mt-3 mb-2 text-center"><h2 class="ho2 text-center" routerLink="/usersl">Users List</h2></button> 
+
+          </div>
+
+          <div class="d-flex justify-content-center mt-4">
+            <button class="button-59 btn-lg mt-3" style="font-size: 23px;"  >Log Out</button>
+
+          </div>
+        
+
+    </div>
+  
+    <!-- ------------------------------------------------------------- -->
+
+
+
+  <!-- ------------------------------------------------------------ -->
+
+  <div class="w-100 pt-5 d-flex justify-content-center align-items-center" style="height: 80vh;"> 
+       
+
+   
+        
+         <div class="row border shadow ">
+            <!-- <form action="" [formGroup]="bookForm"  > -->
+
+            <div class="col-lg-6 ">
+              
+                <label htmlFor="b_image" >
+                    <input type="file" id='book' style=" display: none;"  (change)="getFile($event)"  >
+                    <img [src]="bookPicture"  style="height: 480px;width: 420px;" class="img-fluid mt-5" alt="">
+                </label>
+             <!-- <input type="file" style= "display: none;" id="b_image" >   
+             <img src="https://www.svgrepo.com/show/334723/image-add.svg" formControlName="b_image" style="height: 480px;width: 320px;" alt=""> -->
+            </div>
+            <div class="col-lg-6 ">
+                <h1 class="mt-5 mb-5 text-center cl">Add Book</h1>
+                <form action="" [formGroup]="bookForm"  >
+                  <div class="form-floating  mb-4 mt-3 w-70">
+                    <input type="text" formControlName="id"  class="form-control" id="floatingidInput" placeholder="id">
+                        <label for="floatingUserInput">Id</label>
+                        
+                      </div>
+                  <div class="form-floating  mb-4 mt-3 w-70">
+                    <input type="text" formControlName="title"  class="form-control" id="floatingtitleInput" placeholder="title">
+                        <label for="floatingUserInput">Title</label>
+                        
+                      </div>
+                      <div class="form-floating mb-4 mt-3 w-70">
+                        <textarea class="form-control" formControlName="description" id="exampleFormControlTextarea1" placeholder="description" rows="4"></textarea>
+                        <!-- <textarea class="form-control" id="floatingdescriptionInput" placeholder="description" rows="3"></textarea> -->
+                        <label for="floatingInput">Description</label>
+                        
+                      </div>
+                      <div class="form-floating  mb-4 mt-3 w-70">
+                        <input type="text" formControlName="category"  class="form-control" id="floatingcategoryInput" placeholder="category">
+                        <label for="floatingPassword">Category</label>
+                       
+                      </div>
+                      <div class="form-floating mb-4 mt-3 w-70">
+                        <input type="text" formControlName="author" class="form-control" id="floatingauthorInput" placeholder="author">
+                        <label for="floatingInput">Author</label>
+                        
+                      </div>
+
+                      <div class="mt-3 mb-5 d-flex justify-content-center">
+                        <button class="button-59  mt-3" style="font-size: 23px;" (click)="getFormData()" [disabled]="bookForm.invalid" >ADD</button>
+                      </div>
+
+                     
+                     
+                      
+                      
+               
+          </form>  
+         </div>
+    <!-- </form> -->
+
+
+       </div>
+    
+       
+
+       
+
+       
+
+    </div>
+
+  <!-- ------------------------------------------------------------------------- -->
+  
+
+
+
+<!-- <app-footer></app-footer> -->
