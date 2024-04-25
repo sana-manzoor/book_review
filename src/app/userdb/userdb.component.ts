@@ -15,7 +15,7 @@ export class UserdbComponent implements OnInit {
 
   }
 
-  SERVER_URL:any="http://localhost:3000"
+  SERVER_URL:any="https://bookreview-server.onrender.com"
   books:any[]=[]
   searchtext:any=""
 

@@ -15,7 +15,7 @@ import { NgClass } from '@angular/common';
 export class ViewComponent implements OnInit{
   
   
-  SERVER_URL:any="http://localhost:3000"
+  SERVER_URL:any="https://bookreview-server.onrender.com"
   bid:any=0
   book:any={}
   users:any[]=[]

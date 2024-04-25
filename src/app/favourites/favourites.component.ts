@@ -12,7 +12,7 @@ export class FavouritesComponent implements OnInit {
 
 
   books:any=[]
-  SERVER_URL:any="http://localhost:3000"
+  SERVER_URL:any="https://bookreview-server.onrender.com"
 
   constructor(private api:ApiService,private toastr:ToastrService){
 
