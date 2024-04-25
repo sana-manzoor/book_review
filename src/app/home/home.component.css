@@ -13,6 +13,13 @@
 
 .ho2{
   font-family: "Fondamento", cursive;
+  
+}
+
+
+.ho5{
+  font-family: "Fondamento", cursive;
+  font-size: 51px;
 }
 
 
@@ -198,4 +205,22 @@ font-style: normal;
 .ho3{
 font-family: "Fondamento", cursive;
 font-size: 25px;
+}
+
+
+
+.sa{
+  animation-name: example;
+  animation-duration: 4s;
+  transition: all .5s;
+}
+
+@keyframes spin {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
+
+}
+
+.spin{
+  animation: spin 13s ease-in-out infinite;
 }

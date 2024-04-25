@@ -12,4 +12,12 @@ export class AdmindbComponent {
 
   }
 
+  
+logout(){
+  sessionStorage.clear()
+  
+  this.router.navigateByUrl('/log')
+
+}
+
 }
