@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
 
-  SERVER_URL:any="hhttps://bookreview-server.onrender.com"
+  SERVER_URL:any="https://bookreview-server-2.onrender.com"
   bid:any=0
   book:any={}
   upd: any = {};

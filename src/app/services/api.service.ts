@@ -5,7 +5,7 @@ import { HttpClient ,HttpHeaders} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  SERVER_URL="https://bookreview-server.onrender.com"
+  SERVER_URL="https://bookreview-server-2.onrender.com"
 
 
   constructor(private http:HttpClient) { 

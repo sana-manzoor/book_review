@@ -13,7 +13,7 @@ export class HomeComponent {
 
   }
 
-  SERVER_URL:any="https://bookreview-server.onrender.com"
+  SERVER_URL:any="https://bookreview-server-2.onrender.com"
   books:any[]=[]
 
   ngOnInit() {
