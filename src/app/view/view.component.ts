@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { ToastrService } from 'ngx-toastr';
@@ -38,6 +38,7 @@ export class ViewComponent implements OnInit{
   ngOnInit() {
     this.getData()
     this.getData2()
+    this.handlecomment()
 
   }
 
@@ -102,7 +103,7 @@ export class ViewComponent implements OnInit{
      
 
       this.toastr.success("Review Added Successfully!!")
-     
+      
       this.getData()
       
 
@@ -115,9 +116,9 @@ export class ViewComponent implements OnInit{
     })
   }
 
-  resetform(form:NgForm){
-    this.rev.review = '';
-    form.resetForm();
+  resetform(){
+    
+   
   }
 
 
