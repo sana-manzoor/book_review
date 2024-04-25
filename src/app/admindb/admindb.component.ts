@@ -12,7 +12,8 @@ export class AdmindbComponent {
 
   }
 
-  
+ 
+   
 logout(){
   sessionStorage.clear()
   

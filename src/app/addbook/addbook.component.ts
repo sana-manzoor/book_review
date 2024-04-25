@@ -37,6 +37,14 @@ export class AddbookComponent  {
 
   })
 
+   
+logout(){
+  sessionStorage.clear()
+  
+  this.router.navigateByUrl('/log')
+
+}
+
 
   // ngOnInit() {
   //   this.getData()

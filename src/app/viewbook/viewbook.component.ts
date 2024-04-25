@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ViewbookComponent implements OnInit {
 
-  constructor(private api:ApiService,private toastr:ToastrService){
+  constructor(private api:ApiService,private toastr:ToastrService,private router:Router){
 
   }
 
@@ -32,7 +32,13 @@ export class ViewbookComponent implements OnInit {
     )
   }
 
+   
+logout(){
+  sessionStorage.clear()
   
+  this.router.navigateByUrl('/log')
+
+}
   
 
 }

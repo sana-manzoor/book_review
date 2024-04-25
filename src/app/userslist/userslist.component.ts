@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-userslist',
@@ -11,9 +12,17 @@ export class UserslistComponent implements OnInit {
 
   users:any[]=[]
 
-   constructor(private api:ApiService){
+   constructor(private api:ApiService,private router:Router){
 
    }
+
+    
+logout(){
+  sessionStorage.clear()
+  
+  this.router.navigateByUrl('/log')
+
+}
 
    ngOnInit() {
      this.getData()
